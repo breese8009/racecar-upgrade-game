@@ -1,5 +1,5 @@
 $(document).ready(function() {
-let lowestOfLows="+=15px";
+let lowestOfLows="+=10px";
 let lowest = '+=20px';
 let low='+=50px';
 let mid='+=75px';
@@ -8,75 +8,55 @@ let orig='0px';
 
 let player1 = 100;
 let score=0;
-let penality=25;
 
-$('.turb5').change(function() {
-  if ($('.turb5').is(':checked')) {
-  	moneyLeft(player1-=5);
-  	orig=lowestOfLows;
+
+$('.turb').on('click', function(){
+    moneyLeft(player1-=5);
+    orig=lowestOfLows;
     score+=5;
     $('img').animate({
-		'margin-top':orig,
-	})
-  } else{
-  	console.log(player1);
-  }
+    'margin-top':orig,
+  })
 });
 
-$('.turb').change(function() {
-  if ($('.turb').is(':checked')) {
-  	moneyLeft(player1-=20);
-  	orig=low;
+
+
+$('.turb1').on('click', function(){
+    moneyLeft(player1-=10);
+    orig=lowest;
+    score+=10;
+    $('img').animate({
+    'margin-top':orig,
+  })
+});
+
+$('.turb2').on('click', function(){
+    moneyLeft(player1-=20);
+    orig=low;
     score+=20;
     $('img').animate({
-		'margin-top':orig,
-	})
-  } else{
-  	console.log(player1);
-  }
+    'margin-top':orig,
+  })
 });
 
 
-$('.turb1').change(function() {
-  if ($('.turb1').is(':checked')) {
-  	score+=40;
-  	moneyLeft(player1-=40);
-  	orig=mid;
-  	  $('img').animate({
-		'margin-top':orig,
-	})
-  } else{
-  	console.log(player1);
-  }
-});
-
-
-$('.turb2').change(function() {
-  if ($('.turb2').is(':checked')) {
-  	score+=60;
-  	moneyLeft(player1-=60);
-  	orig=high;
-      $('img').animate({
-		'margin-top':orig,
-	})
-  } else{
-  	console.log(player1);
-  }
-});
-
-$('.turb3').change(function() {
-  if ($('.turb3').is(':checked')) {
-  	score+=10;
-  	moneyLeft(player1-=10);
-  	orig=lowest;
+$('.turb3').on('click', function(){
+    moneyLeft(player1-=40);
+    orig=mid;
+    score+=40;
     $('img').animate({
-		'margin-top':orig,
-	})
-  } else{
-  	console.log(player1);
-  }
+    'margin-top':orig,
+  })
 });
 
+$('.turb4').on('click', function(){
+    moneyLeft(player1-=60);
+    orig=high;
+    score+=60;
+    $('img').animate({
+    'margin-top':orig,
+  })
+});
 
 function moneyLeft(n) {
 if(n===0){
@@ -86,7 +66,7 @@ if(n===0){
 	}, 3000);
 
 } else if(n<0){
-		alert("You are out of money! Game over! Your score is "+(score-25));
+		alert("You spent more money then you have! Your score has been penalized! Game over! Your score is "+(score-25));
 	setTimeout(function(){ 
 		return window.location = window.location; 
 	}, 3000);
