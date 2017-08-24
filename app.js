@@ -8,6 +8,7 @@ let orig='0px';
 
 let player1 = 100;
 let score=0;
+let penality=25;
 
 $('.turb5').change(function() {
   if ($('.turb5').is(':checked')) {
@@ -78,8 +79,14 @@ $('.turb3').change(function() {
 
 
 function moneyLeft(n) {
-if(n<=0){
+if(n===0){
 	alert("You are out of money! Game over! Your score is "+score);
+	setTimeout(function(){ 
+		return window.location = window.location; 
+	}, 3000);
+
+} else if(n<0){
+		alert("You are out of money! Game over! Your score is "+(score-25));
 	setTimeout(function(){ 
 		return window.location = window.location; 
 	}, 3000);
