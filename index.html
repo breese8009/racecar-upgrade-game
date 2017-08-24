@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game Project</title>
+	 <!--bootstrap/css link--> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- javascript/jquery/ BS JS -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+
+
+
+<!-- modal directions -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">How to play</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        The goal is to get as far down the page as possible with $100 provided in engine upgrades. 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- racecar game -->
+<div id="dash">
+<h1>Select Upgrades</h1>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Directions
+</button>
+<div class="row">
+<div class="col-sm-2">
+<label>Itty-Bitty Turbo $5</label>
+<input class="turb5" type="checkbox" name="turbo">
+</div>
+
+<div class="col-sm-3">
+<label>Mini Turbo $10</label>
+<input class="turb3" type="checkbox" name="turbo">
+</div>
+
+<div class="col-sm-2">
+<label>Low Turbo $20</label>
+<input class="turb" type="checkbox" name="turbo">
+</div>
+
+<div class="col-sm-3">
+<label>Mid Turbo $40</label>
+<input class="turb1" type="checkbox" name="turbo">
+</div>
+
+<div class="col-sm-2">
+<label>High Turbo $60</label>
+<input class="turb2" type="checkbox" name="turbo">
+</div>
+
+</div>
+</div>
+
+<div id="road">
+<img class="cars" src="http://images.clipartpanda.com/red-sports-car-clipart-dc7e5d9gi.svg">
+</div>
+
+<div id="finishLine"> 
+<div class="row">
+<div class="col-sm-12">
+<h1>Finish Line</h1>
+
+</div>
+</div>
+
+
+</body>
+</html>
